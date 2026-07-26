@@ -1,0 +1,258 @@
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOIZUKI</title>
+    <link rel="stylesheet" href="css/style2.css">
+    <script src="script/jquery-3.7.0.min.js"></script>
+    <script src="script/action.js"></script>
+
+    
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Dancing+Script:wght@400..700&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+  <!-- font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="site-wrap">
+
+    <!-- =========================
+         메인 비주얼
+    ========================== -->
+    <section class="hero">
+
+      <!-- 헤더 -->
+      <header class="header">
+
+        <!-- 로고 -->
+        <h1 class="logo">
+          <a href="#">
+            <span class="logo-icon">☾</span>
+            <span class="logo-jp">宵月</span>
+            <span class="logo-en">YOIZUKI</span>
+          </a>
+        </h1>
+
+        <!-- 내비게이션 -->
+        <nav class="gnb" aria-label="메인 메뉴">
+          <ul>
+            <li><a href="#stay">STAY</a></li>
+            <li><a href="#rooms">ROOMS</a></li>
+            <li><a href="#onsen">ONSEN</a></li>
+            <li><a href="#dining">DINING</a></li>
+            <li><a href="#experience">EXPERIENCE</a></li>
+            <li><a href="#gallery">GALLERY</a></li>
+            <li><a href="#access">ACCESS</a></li>
+          </ul>
+        </nav>
+
+        <!-- 우측 메뉴 -->
+        <div class="header-actions">
+          <a href="#reservation" class="header-reservation">
+            RESERVATION
+          </a>
+
+          <button type="button" class="menu-button" aria-label="메뉴 열기">
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+      </header>
+
+      <!-- 히어로 중앙 콘텐츠 -->
+      <div class="hero-content">
+
+        <p class="hero-moon">☾</p>
+
+        <h2 class="hero-title">
+          宵に包まれる、<br>
+          静かなひととき。
+        </h2>
+
+        <p class="hero-subtitle">
+          Where Evening Meets Serenity.
+        </p>
+
+        <p class="hero-location">
+          <span>⌖</span>
+          HAKONE, KANAGAWA
+        </p>
+
+      </div>
+
+      <!-- 예약 검색 영역 -->
+      <form class="booking-bar" id="reservation">
+
+        <div class="booking-item">
+          <label for="check-in">CHECK-IN</label>
+          <div class="booking-control">
+            <input
+              type="date"
+              id="check-in"
+              name="check-in"
+              value="2024-06-15"
+            >
+          </div>
+        </div>
+
+        <div class="booking-item">
+          <label for="check-out">CHECK-OUT</label>
+          <div class="booking-control">
+            <input
+              type="date"
+              id="check-out"
+              name="check-out"
+              value="2024-06-16"
+            >
+          </div>
+        </div>
+
+        <div class="booking-item">
+          <label for="guests">GUESTS</label>
+          <div class="booking-control">
+            <select id="guests" name="guests">
+              <option value="1">1 Adult</option>
+              <option value="2" selected>2 Adults</option>
+              <option value="3">3 Adults</option>
+              <option value="4">4 Adults</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="booking-submit">
+          <span>RESERVE NOW</span>
+          <span aria-hidden="true">⟶</span>
+        </button>
+
+      </form>
+
+    </section>
+
+
+    <!-- =========================
+         하단 콘텐츠
+    ========================== -->
+    <main class="main-content">
+
+      <!-- 시설 소개 카드 -->
+      <section class="service-section">
+
+        <div class="service-grid">
+
+          <article class="service-card" id="rooms">
+            <a href="#">
+              <div class="service-image">
+                <img
+                  src="images/room.jpg"
+                  alt="자연을 바라볼 수 있는 객실"
+                >
+              </div>
+
+              <div class="service-info">
+                <h3>ROOMS</h3>
+                <p>自然と調和する、やすらぎの客室。</p>
+                <span class="service-arrow">⟶</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="service-card" id="onsen">
+            <a href="#">
+              <div class="service-image">
+                <img
+                  src="images/onsen.jpg"
+                  alt="숲속 노천온천"
+                >
+              </div>
+
+              <div class="service-info">
+                <h3>ONSEN</h3>
+                <p>箱根の名湯を、心ゆくまで。</p>
+                <span class="service-arrow">⟶</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="service-card" id="dining">
+            <a href="#">
+              <div class="service-image">
+                <img
+                  src="images/dining.jpg"
+                  alt="제철 식재료로 구성된 일본 요리"
+                >
+              </div>
+
+              <div class="service-info">
+                <h3>DINING</h3>
+                <p>旬を味わう、季節の会席料理。</p>
+                <span class="service-arrow">⟶</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="service-card" id="experience">
+            <a href="#">
+              <div class="service-image">
+                <img
+                  src="images/experience.jpg"
+                  alt="료칸에서 바라보는 일본 정원"
+                >
+              </div>
+
+              <div class="service-info">
+                <h3>EXPERIENCE</h3>
+                <p>この地ならではの、特別な体験を。</p>
+                <span class="service-arrow">⟶</span>
+              </div>
+            </a>
+          </article>
+
+        </div>
+
+      </section>
+
+
+      <!-- 브랜드 소개 -->
+      <aside class="brand-panel">
+
+        <div class="brand-panel-inner">
+
+          <span class="brand-moon">☾</span>
+
+          <h2 class="brand-title">
+            宵月
+          </h2>
+
+          <p class="brand-name">YOIZUKI</p>
+          <p class="brand-category">MODERN JAPANESE RYOKAN</p>
+
+          <p class="brand-description">
+            箱根の自然に抱かれた、<br>
+            おやすみ前の隠れ宿。<br>
+            大切な人と過ごす、かけがえのない時間を<br>
+            お届けします。
+          </p>
+
+          <a href="#" class="brand-more">
+            <span>VIEW MORE</span>
+            <span aria-hidden="true">⟶</span>
+          </a>
+
+        </div>
+
+      </aside>
+
+    </main>
+
+  </div>
+
+</body>
+</html>
