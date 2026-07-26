@@ -1,0 +1,361 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #b8b8b8;
+  color: #222;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.site-wrap {
+  max-width: 1440px;
+  margin: 10px auto;
+  background: #fff;
+  overflow: hidden;
+}
+
+
+/* 히어로 */
+
+.hero {
+  position: relative;
+  min-height: 740px;
+  color: #fff;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(6, 15, 19, 0.6),
+      rgba(6, 15, 19, 0.05)
+    ),
+    url("../images/hero.jpg") center / cover no-repeat;
+}
+
+
+/* 헤더 */
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  display: grid;
+  grid-template-columns: 180px 1fr auto;
+  align-items: start;
+
+  width: 100%;
+  padding: 35px 60px;
+}
+
+.logo a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+}
+
+.logo-icon {
+  margin-bottom: 12px;
+  font-size: 34px;
+  color: #bca665;
+}
+
+.logo-jp {
+  font-family: serif;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  writing-mode: vertical-rl;
+}
+
+.logo-en {
+  margin-top: 12px;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+}
+
+.gnb {
+  justify-self: center;
+}
+
+.gnb ul {
+  display: flex;
+  gap: 32px;
+}
+
+.gnb a {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.header-reservation {
+  padding: 18px 38px;
+  background: #ac9560;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+}
+
+.menu-button {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+
+  border: 0;
+  padding: 10px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.menu-button span {
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: #fff;
+}
+
+
+/* 히어로 문구 */
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 70px;
+  transform: translateY(-42%);
+}
+
+.hero-moon {
+  margin: 0 0 100px 180px;
+  font-size: 40px;
+  color: #dbd3b9;
+}
+
+.hero-title {
+  margin: 0;
+  font-family: serif;
+  font-size: 43px;
+  font-weight: 400;
+  line-height: 1.65;
+  letter-spacing: 0.1em;
+}
+
+.hero-subtitle {
+  margin: 22px 0 65px;
+  font-family: serif;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+}
+
+.hero-location {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+}
+
+
+/* 예약 바 */
+
+.booking-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(180px, 1fr)) 230px;
+  gap: 30px;
+  align-items: end;
+
+  width: 72%;
+  padding: 25px 70px;
+  background: rgba(7, 14, 15, 0.7);
+  backdrop-filter: blur(5px);
+}
+
+.booking-item label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 9px;
+  color: #a9a9a9;
+  letter-spacing: 0.1em;
+}
+
+.booking-control {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.booking-control input,
+.booking-control select {
+  width: 100%;
+  border: 0;
+  padding: 8px 0 12px;
+  background: transparent;
+  color: #fff;
+  outline: none;
+}
+
+.booking-submit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 60px;
+  border: 0;
+  padding: 0 28px;
+  background: #aa9565;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+/* 하단 영역 */
+
+.main-content {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.service-section {
+  padding: 48px 42px 40px;
+  background: #f5f2eb;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.service-image {
+  aspect-ratio: 1 / 0.92;
+  overflow: hidden;
+}
+
+.service-image img {
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.service-card:hover img {
+  transform: scale(1.05);
+}
+
+.service-info {
+  padding-top: 14px;
+}
+
+.service-info h3 {
+  margin: 0 0 10px;
+  font-family: serif;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+}
+
+.service-info p {
+  margin: 0 0 18px;
+  font-size: 10px;
+  line-height: 1.8;
+  color: #737168;
+}
+
+.service-arrow {
+  font-size: 18px;
+}
+
+
+/* 브랜드 패널 */
+
+.brand-panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 55px 40px;
+  background: #333d2b;
+  color: #fff;
+  text-align: center;
+}
+
+.brand-panel-inner {
+  width: 100%;
+}
+
+.brand-moon {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 32px;
+  color: #b8a163;
+}
+
+.brand-title {
+  margin: 0;
+  font-family: serif;
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+}
+
+.brand-name {
+  margin: 8px 0 4px;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+}
+
+.brand-category {
+  margin: 0 0 28px;
+  font-size: 7px;
+  letter-spacing: 0.15em;
+  opacity: 0.6;
+}
+
+.brand-description {
+  margin-bottom: 40px;
+  font-family: serif;
+  font-size: 10px;
+  line-height: 2;
+  opacity: 0.75;
+}
+
+.brand-more {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  padding: 18px 25px;
+
+  font-size: 10px;
+  letter-spacing: 0.12em;
+}
